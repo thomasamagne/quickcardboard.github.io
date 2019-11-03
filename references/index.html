@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="masonry.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../css/fixed-left.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <title>Quick Cardboard</title>
+</head>
+
+<body>
+  <!-- navbar left -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-left">
+    <a class="navbar-brand" href>Quick Cardboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarDefault">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">References</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">GameNight & Blogs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!--   jumbotron -->
+  <div class="jumbotron">
+    <h1 class="display-4">References</h1>
+    <p class="lead">Find your favorite game in this alphabetical list</p>
+
+  </div>
+  
+<!--   Masonry list -->
+  <div class="masonry-wrapper">
+  <div class="masonry">
+  
+  <div class="masonry-item">
+    <img src="https://picsum.photos/450/450?image=200" alt="Dummy Image" class="masonry-content">
+    <div class="gamedesc h-100 w-100"  onmouseover="darken(this)" onmouseout="normal(this)">
+      <h5>Game Title</h5>
+      <p>Short description of game</p>
+    </div>
+  </div>
+  <a href="../" class="masonry-item">
+    <img src="https://picsum.photos/450/280?image=300" alt="Dummy Image" class="masonry-content">
+    <div class="gamedesc h-100 w-100"  onmouseover="darken(this)" onmouseout="normal(this)">
+      <h5>Game Title 2</h5>
+      <p>Short description of game2</p>
+    </div>
+  </a>
+  <div class="masonry-item">
+    <img src="https://picsum.photos/450/540?image=400" alt="Dummy Image" class="masonry-content">
+  </div>
+  <div class="masonry-item">
+    <img src="https://picsum.photos/450/380?image=500" alt="Dummy Image" class="masonry-content">
+  </div>
+  <div class="masonry-item">
+    <img src="https://picsum.photos/450/300?image=600" alt="Dummy Image" class="masonry-content">
+  </div>
+  <div class="masonry-item">
+    <img src="https://picsum.photos/450/400?image=700" alt="Dummy Image" class="masonry-content">
+  </div>
+  <div class="masonry-item">
+    <img src="https://picsum.photos/450/300?image=800" alt="Dummy Image" class="masonry-content">
+  </div>
+
+</div>
+
+</div>
+  <script src="//unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script src="masonry.js"></script>
+  <script src="ref.js"></script>
+  </body>

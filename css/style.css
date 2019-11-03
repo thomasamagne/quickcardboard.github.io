@@ -1,0 +1,22 @@
+.navbar {
+  background: #2a2f30;
+}
+
+#feature-1 {
+  background-image: url(https://picsum.photos/450/225?image=350);
+}
+
+.card {
+  border: none;
+  background-size: cover;
+  color: white;
+  text-shadow: 0px 0px 6px rgba(0,0,0,0.7);
+}
+
+.card:hover {
+ 
+box-shadow: inset 0px 0px 100px 32px rgba(0,0,0,0.75);
+  text-decoration: none;
+  color: white;
+  transition: box-shadow 0.2s;
+}

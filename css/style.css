@@ -20,3 +20,13 @@ box-shadow: inset 0px 0px 100px 32px rgba(0,0,0,0.75);
   color: white;
   transition: box-shadow 0.2s;
 }
+
+.tooltip-inner {
+  background-color: rgb(24, 24, 24); 
+  color: #FFFFFF; 
+  border: 1px solid rgb(24, 24, 24); 
+  padding: 1em;
+  font-size: 1em;
+  text-align: left;
+  max-width:300px;
+}

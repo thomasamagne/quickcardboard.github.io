@@ -20,7 +20,11 @@ box-shadow: inset 0px 0px 100px 32px rgba(0,0,0,0.75);
   color: white;
   transition: box-shadow 0.2s;
 }
+a {
+  color: #4b9cde;
+}
 
+/* tooltip */
 .tooltip-inner {
   background-color: rgb(24, 24, 24); 
   color: #FFFFFF; 
@@ -29,4 +33,17 @@ box-shadow: inset 0px 0px 100px 32px rgba(0,0,0,0.75);
   font-size: 1em;
   text-align: left;
   max-width:300px;
+}
+
+.hovertooltip {
+  color: #4b9cde
+}
+
+/* Showhide */
+.toggle-trigger {
+  cursor: pointer;
+  color: #4b9cde;
+}
+.toggle-target {
+  display: none;
 }

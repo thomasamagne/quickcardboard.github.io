@@ -21,3 +21,13 @@ function filter(element) {
       }
   });
 }
+
+// get image from bgg
+function getImage(x) {
+  var boxart
+  api = "https://bgg-json.azurewebsites.net/thing/" + x;
+  $.getJSON(api, function(result){
+    boxart = result.image;
+    document.getElementById(x).src = result.image;
+  })
+}

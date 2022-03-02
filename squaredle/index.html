@@ -1,0 +1,87 @@
+
+<div class="alert-container">You got it in 4 guesses! <div id="share"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="30" height="30"
+viewBox="0 0 172 172"
+style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M131.86667,17.2c-12.66573,0 -22.93333,10.2676 -22.93333,22.93333c0.01022,1.61202 0.19038,3.21847 0.5375,4.79271l-52.07031,26.03516c-4.34502,-5.00238 -10.64127,-7.88101 -17.26719,-7.89453c-12.66573,0 -22.93333,10.2676 -22.93333,22.93333c0,12.66573 10.2676,22.93333 22.93333,22.93333c6.62805,-0.00746 12.92873,-2.88217 17.27839,-7.88333l52.03672,26.02396c-0.33959,1.57504 -0.51224,3.18148 -0.51511,4.79271c0,12.66573 10.2676,22.93333 22.93333,22.93333c12.66573,0 22.93333,-10.2676 22.93333,-22.93333c0,-12.66573 -10.2676,-22.93333 -22.93333,-22.93333c-6.62805,0.00746 -12.92873,2.88217 -17.27839,7.88333l-52.03672,-26.02396c0.33959,-1.57504 0.51224,-3.18148 0.51511,-4.79271c-0.01101,-1.60827 -0.19117,-3.21093 -0.5375,-4.78151l52.07031,-26.03516c4.34709,4.99822 10.64305,7.87264 17.26719,7.88333c12.66573,0 22.93333,-10.2676 22.93333,-22.93333c0,-12.66573 -10.2676,-22.93333 -22.93333,-22.93333z"></path></g></g></svg>Share</div></div>
+<div class="title">
+  <h1>SQUAREDLE</h1>
+  <div class="instruction"><div class="clue" data-state = 'correct'></div><p>One correct letter in correct position </p></div>
+  <div class="instruction"><div class="clue" data-state = 'wrong-position'></div><p>One correct letter but wrong position </p></div>
+</div>
+<div class="main-grid">
+  <div class="guess-count-container">
+      <div class="guess-count" data-guesscount = '0' data-state = 'current' data-selection = 'true'>1</div>
+      <div class="guess-count" data-guesscount = '1' data-state = 'inactive' data-selection = 'false'>2</div>
+      <div class="guess-count" data-guesscount = '2' data-state = 'inactive' data-selection = 'false'>3</div>
+      <div class="guess-count" data-guesscount = '3' data-state = 'inactive' data-selection = 'false'>4</div>
+      <div class="guess-count" data-guesscount = '4' data-state = 'inactive' data-selection = 'false'>5</div>
+      <div class="guess-count" data-guesscount = '5' data-state = 'inactive' data-selection = 'false'>6</div>
+      <div class="guess-count" data-guesscount = '6' data-state = 'inactive' data-selection = 'false'>7</div> 
+    <div class="guess-count" data-guesscount = '7' data-state = 'inactive' data-selection = 'false'>8</div>
+  </div>
+  
+  <div class="clue-container" data-cluenumber = '0'></div>
+  <div class="clue-container" data-cluenumber = '1'></div>
+  <div class="clue-container" data-cluenumber = '2'></div>
+  <div class="clue-container" data-cluenumber = '3'></div>
+  <div class="clue-container" data-cluenumber = '4'></div>
+  <div class="clue-container" data-cluenumber = '5'></div>
+  <div class="clue-container" data-cluenumber = '6'></div>
+  <div class="clue-container" data-cluenumber = '7'></div>
+  
+  
+  <div class="guess-grid" data-guessgrid>
+    <div class="tile" data-state="active"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>  
+  </div>
+</div>
+
+<div class="keyboard">
+  <button class="key" data-key="Q">Q</button>
+  <button class="key" data-key="W">W</button>
+  <button class="key" data-key="E">E</button>
+  <button class="key" data-key="R">R</button>
+  <button class="key" data-key="T">T</button>
+  <button class="key" data-key="Y">Y</button>
+  <button class="key" data-key="U">U</button>
+  <button class="key" data-key="I">I</button>
+  <button class="key" data-key="O">O</button>
+  <button class="key" data-key="P">P</button>
+  <div class="space"></div>
+  <button class="key" data-key="A">A</button>
+  <button class="key" data-key="S">S</button>
+  <button class="key" data-key="D">D</button>
+  <button class="key" data-key="F">F</button>
+  <button class="key" data-key="G">G</button>
+  <button class="key" data-key="H">H</button>
+  <button class="key" data-key="J">J</button>
+  <button class="key" data-key="K">K</button>
+  <button class="key" data-key="L">L</button>
+  <div class="space"></div>
+  <button class="key large" data-enter>ENTER</button>
+  <button class="key" data-key="Z">Z</button>
+  <button class="key" data-key="X">X</button>
+  <button class="key" data-key="C">C</button>
+  <button class="key" data-key="V">V</button>
+  <button class="key" data-key="B">B</button>
+  <button class="key" data-key="N">N</button>
+  <button class="key" data-key="M">M</button>
+  <button class="key large" data-delete><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+        <path fill="var(--color-tone-1)" d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z"></path>
+      </svg></button>
+
+</div>

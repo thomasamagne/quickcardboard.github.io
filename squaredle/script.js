@@ -1,3 +1,4 @@
+
 let dict = [
 'abet',
 'abut',
@@ -1010,6 +1011,7 @@ let clueContainer = document.getElementsByClassName('clue-container')
 let alertContainer = document.querySelector('.alert-container')
 let shareBtn = document.querySelector('#share')
 let partialGuess = [null,null, null, null, null, null, null, null, null,null, null, null, null, null, null, null ]
+let blackedLetters = [[],[],[],[],[],[],[],[]]
 
 //initialize answer based on date
 let offsetFromDate = new Date(2022, 0, 1)
@@ -1076,6 +1078,7 @@ function handleMouseClick(e) {
     return
   }
   if (e.target.matches("[data-delete]")) {
+    console.log('delete')
     deleteKey()
     return
   }
@@ -1121,7 +1124,7 @@ function deleteKey() {
 }
 
 function submitGuess(gc) {
-      guessCount ++
+      
   //check win
   if (saveGuess() === answer) {
     alert('You got it in '+ (guessCount + 1) + ' guesses!', true)
@@ -1145,7 +1148,7 @@ function submitGuess(gc) {
     allGuess[gc] = saveGuess()
     renderClues(gc)
     makeBtnActive()
-
+    guessCount ++
     stopInteraction()
     for (let i = 0; i< tileList.length; i++) {
       tileList[i].addEventListener('click', highlight)
@@ -1189,6 +1192,9 @@ function toggleGuessBtn(num) {
     savePartial()
     stopInteraction()
     clearGrid()
+    // for (let i = 0; i< clueContainer.length; i++) {
+    //   clueContainer[i].addEventListener('click', showBlackout)
+    // }
     for (let i = 0; i< tileList.length; i++) {
       tileList[i].textContent = allGuess[parseInt(this.dataset.index)][i]
       tileList[i].addEventListener('click', highlight)
@@ -1333,3 +1339,14 @@ function highlight() {
     } 
   }
 }
+
+// function showBlackout() {
+//   let currentClue = this.dataset.cluenumber
+//   document.addEventListener('click', function(e) {
+//     if (e.target.matches("[data-key]")){
+//     console.log(e.target.dataset.key)
+    
+//   }
+   
+//   })
+// }

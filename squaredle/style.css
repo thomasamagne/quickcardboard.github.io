@@ -274,3 +274,40 @@ body {
   50%  {transform: translateY(-30px)}
   100% {transform: translateY(0px)}
 }
+
+@media screen and (max-width:492px) { 
+  .title h1{
+    font-size: 4em;
+  }
+  .title .instruction {
+    font-size: 2em;
+  }
+  .keyboard {
+  display: grid;
+  grid-template-columns: repeat(20, 0.8em);
+  grid-auto-rows: 4em;
+  gap: .2em;
+  justify-content: center;
+    font-size: 2em;
+}
+  
+  .main-grid {
+  
+  grid-template-columns: repeat(6, 6em);
+  grid-template-rows: repeat(5, 6em);
+
+  
+}
+  .guess-grid {   
+
+  grid-template-columns: repeat(4, 6em);
+  grid-template-rows: repeat(4, 6em);
+
+
+  
+}
+  .guess-count {
+  height: 3.25em;
+
+}
+}

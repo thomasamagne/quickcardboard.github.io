@@ -8,7 +8,7 @@
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
+
 <div class="alert-container">You got it in 4 guesses! <div id="share"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 width="30" height="30"
 viewBox="0 0 172 172"
@@ -30,7 +30,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
     <div class="guess-count" data-guesscount = '7' data-state = 'inactive' data-selection = 'false'>8</div>
   </div>
   
-  <div class="clue-container" data-cluenumber = '0'></div>
+  <div class="clue-container" data-cluenumber = '0'><div class="clue" data-state='correct'></div><div class="clue" data-state='correct'></div></div>
   <div class="clue-container" data-cluenumber = '1'></div>
   <div class="clue-container" data-cluenumber = '2'></div>
   <div class="clue-container" data-cluenumber = '3'></div>
@@ -82,10 +82,10 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
   <button class="key" data-key="K">K</button>
   <button class="key" data-key="L">L</button>
   <div class="space"></div>
-  <button class="key large" data-enter><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+  <button class="key large" data-enter><svg data-enter xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 width="24" height="24"
 viewBox="0 0 172 172"
-style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M136.16667,21.5h-100.33333c-7.91917,0 -14.33333,6.41417 -14.33333,14.33333v43h61.533l-11.4165,-11.4165c-2.80217,-2.80217 -2.80217,-7.3315 0,-10.13367c2.80217,-2.80217 7.3315,-2.80217 10.13367,0l23.65,23.65c2.795,2.795 2.795,7.33867 0,10.13367l-23.65,23.65c-1.3975,1.3975 -3.23217,2.09983 -5.06683,2.09983c-1.83467,0 -3.66933,-0.70233 -5.06683,-2.09983c-2.80217,-2.80217 -2.80217,-7.3315 0,-10.13367l11.4165,-11.4165h-61.533v43c0,7.91917 6.41417,14.33333 14.33333,14.33333h100.33333c7.91917,0 14.33333,-6.41417 14.33333,-14.33333v-100.33333c0,-7.91917 -6.41417,-14.33333 -14.33333,-14.33333z"></path></g></g></svg></button>
+style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path data-enter d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path data-enter d="M136.16667,21.5h-100.33333c-7.91917,0 -14.33333,6.41417 -14.33333,14.33333v43h61.533l-11.4165,-11.4165c-2.80217,-2.80217 -2.80217,-7.3315 0,-10.13367c2.80217,-2.80217 7.3315,-2.80217 10.13367,0l23.65,23.65c2.795,2.795 2.795,7.33867 0,10.13367l-23.65,23.65c-1.3975,1.3975 -3.23217,2.09983 -5.06683,2.09983c-1.83467,0 -3.66933,-0.70233 -5.06683,-2.09983c-2.80217,-2.80217 -2.80217,-7.3315 0,-10.13367l11.4165,-11.4165h-61.533v43c0,7.91917 6.41417,14.33333 14.33333,14.33333h100.33333c7.91917,0 14.33333,-6.41417 14.33333,-14.33333v-100.33333c0,-7.91917 -6.41417,-14.33333 -14.33333,-14.33333z"></path></g></g></svg></button>
   <button class="key" data-key="Z">Z</button>
   <button class="key" data-key="X">X</button>
   <button class="key" data-key="C">C</button>
@@ -94,11 +94,10 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
   <button class="key" data-key="N">N</button>
   <button class="key" data-key="M">M</button>
   <button class="key large" data-delete><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-        <path fill="var(--color-tone-1)" d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z"></path>
+        <path data-delete fill="var(--color-tone-1)" d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z"></path>
       </svg></button>
 
 </div>
-<!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js'></script><script  src="./script.js"></script>
 
 </body>

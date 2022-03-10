@@ -4618,6 +4618,7 @@ function renderClues(gc) {
     for (let j = 0; j < workingGuessParsed.length; j++) {
       if (workingAnswerParsed.includes(workingGuessParsed[j])) {
         clueArray.push(1);
+        workingAnswerParsed = workingAnswerParsed.slice(0, j) + workingAnswerParsed.slice(j+1 , workingAnswerParsed.length);
       }
     }
     //draw out the clues based on clueArray

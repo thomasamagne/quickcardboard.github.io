@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Wordoku</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="title"><div class="empty"></div>
+  <h1>WORDOKU</h1><div class="introbtn"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="30" height="30"
+viewBox="0 0 172 172"
+style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M86.51511,17.2c-28.42587,0 -44.54576,15.92621 -45.00443,38.97995v1.15339h25.09453v-1.15339c0.55039,-10.1824 7.5946,-16.75208 18.2414,-16.75208c10.55507,0 17.59193,6.1026 17.59193,14.71406c0,8.61146 -3.61138,13.05758 -15.55391,20.18985c-12.7796,7.4992 -17.8777,15.83376 -16.6737,30.6487l0.14557,3.95286h24.57943v-3.7625c0,-8.88667 3.42907,-13.43284 15.74427,-20.55938c13.0548,-7.68839 19.80911,-17.40631 19.80911,-31.29817c0,-21.39107 -17.49195,-36.11328 -43.97422,-36.11328zM83.17812,126.13333c-9.41986,0 -15.29635,5.46853 -15.29635,14.37812c0,8.82934 5.88222,14.28854 15.29635,14.28854c9.41413,0 15.21797,-5.45921 15.21797,-14.28854c0,-8.90959 -5.7981,-14.37812 -15.21797,-14.37812z"></path></g></g></svg></div>
+</div>
+
+
+<div class="main-grid">
+
+  
+  <div class="clue-container" data-cluenumber = '0'></div>
+  <div class="clue-container" data-cluenumber = '1'></div>
+  <div class="clue-container" data-cluenumber = '2'></div>
+  <div class="clue-container" data-cluenumber = '3'></div>
+  
+  <div class="checkbox-container"><h4>LOCK</h4>
+    <input type="checkbox" id = 'lockmode' name = 'lockmode'><label id='lockmodelabel' for="lockmode"></label>
+  </div>
+  
+  <div class="clue-container" data-cluenumber = '4'></div>
+  <div class="clue-container" data-cluenumber = '5'></div>
+  <div class="clue-container" data-cluenumber = '6'></div>
+  <div class="clue-container" data-cluenumber = '7'></div>
+  
+  <div class="note-grid" data-notegrid>
+    <div class="note"></div>
+    <div class="note"></div>
+    <div class="note"></div>
+    <div class="note"></div>
+    <div class="note"></div>
+    <div class="note"></div>
+    <div class="note"></div>
+    <div class="note"></div>
+    <div class="note"></div>
+    <div class="note"></div>
+    <div class="note"></div>
+    <div class="note"></div>
+    <div class="note"></div>
+    <div class="note"></div>
+    <div class="note"></div>
+    <div class="note"></div>  
+  </div>
+  
+  <div class="guess-grid" data-guessgrid>
+    <div class="tile" data-state="active"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>  
+  </div>
+  
+</div>
+  <div class="guess-count-container">
+      <div class="guess-count" data-lock = 'false' data-guesscount = '0' data-state = 'current' data-selection = 'true'>1</div>
+      <div class="guess-count" data-lock = 'false' data-guesscount = '1' data-state = 'inactive' data-selection = 'false'>2</div>
+      <div class="guess-count" data-lock = 'false'  data-guesscount = '2' data-state = 'inactive' data-selection = 'false'>3</div>
+      <div class="guess-count" data-lock = 'false' data-guesscount = '3' data-state = 'inactive' data-selection = 'false'>4</div>
+      <div class="guess-count" data-lock = 'false' data-guesscount = '4' data-state = 'inactive' data-selection = 'false'>5</div>
+      <div class="guess-count" data-lock = 'false' data-guesscount = '5' data-state = 'inactive' data-selection = 'false'>6</div>
+      <div class="guess-count" data-lock = 'false' data-guesscount = '6' data-state = 'inactive' data-selection = 'false'>7</div> 
+    <div class="guess-count" data-lock = 'false' data-guesscount = '7' data-state = 'inactive' data-selection = 'false'>8</div>
+    <div class="guess-count" data-lock = 'false' data-guesscount = '8' data-state = 'inactive' data-selection = 'false'>9</div>
+    <div class="guess-count" data-lock = 'false' data-guesscount = '9' data-state = 'inactive' data-selection = 'false'>10</div>
+    <div class="guess-count" data-lock = 'false' data-guesscount = '10' data-state = 'inactive' data-selection = 'false'>11</div>
+  </div>
+<div class="keyboard">
+  <button class="key" data-key="Q" data-state = 'active'>Q</button>
+  <button class="key" data-key="W">W</button>
+  <button class="key" data-key="E">E</button>
+  <button class="key" data-key="R">R</button>
+  <button class="key" data-key="T">T</button>
+  <button class="key" data-key="Y">Y</button>
+  <button class="key" data-key="U">U</button>
+  <button class="key" data-key="I">I</button>
+  <button class="key" data-key="O">O</button>
+  <button class="key" data-key="P">P</button>
+  <div class="space"></div>
+  <button class="key" data-key="A">A</button>
+  <button class="key" data-key="S">S</button>
+  <button class="key" data-key="D">D</button>
+  <button class="key" data-key="F">F</button>
+  <button class="key" data-key="G">G</button>
+  <button class="key" data-key="H">H</button>
+  <button class="key" data-key="J">J</button>
+  <button class="key" data-key="K">K</button>
+  <button class="key" data-key="L">L</button>
+  <div class="space"></div>
+  <button class="key large" data-enter><svg data-enter xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="24" height="24"
+viewBox="0 0 172 172"
+style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path data-enter d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path data-enter d="M136.16667,21.5h-100.33333c-7.91917,0 -14.33333,6.41417 -14.33333,14.33333v43h61.533l-11.4165,-11.4165c-2.80217,-2.80217 -2.80217,-7.3315 0,-10.13367c2.80217,-2.80217 7.3315,-2.80217 10.13367,0l23.65,23.65c2.795,2.795 2.795,7.33867 0,10.13367l-23.65,23.65c-1.3975,1.3975 -3.23217,2.09983 -5.06683,2.09983c-1.83467,0 -3.66933,-0.70233 -5.06683,-2.09983c-2.80217,-2.80217 -2.80217,-7.3315 0,-10.13367l11.4165,-11.4165h-61.533v43c0,7.91917 6.41417,14.33333 14.33333,14.33333h100.33333c7.91917,0 14.33333,-6.41417 14.33333,-14.33333v-100.33333c0,-7.91917 -6.41417,-14.33333 -14.33333,-14.33333z"></path></g></g></svg></button>
+  <button class="key" data-key="Z">Z</button>
+  <button class="key" data-key="X">X</button>
+  <button class="key" data-key="C">C</button>
+  <button class="key" data-key="V">V</button>
+  <button class="key" data-key="B">B</button>
+  <button class="key" data-key="N">N</button>
+  <button class="key" data-key="M">M</button>
+  <button class="key large" data-delete><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+        <path data-delete fill="var(--color-tone-1)" d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z"></path>
+      </svg></button>
+
+</div>
+<div id="instructions">
+  <h2>Instructions<img id="closeinstruction" src="https://img.icons8.com/ios-filled/50/000000/x.png"/></h2>
+  <p>You have 10 attempts to guess the 4 words in the rows. Each time you submit a guess, clues are given for each column and each row.</p>
+  <div class="clueinstruction">
+    <div class="clue" data-state = 'correct'></div><p>One correct letter in correct position in corresponding row or column</p> </div>
+  <div class="clueinstruction"><div class="clue" data-state = 'wrong-position'></div><p>One correct letter but wrong position in corresponding row or column</p>
+  </div>
+  <h2>Helpful tips</h2>
+  <p>Look through previous submissions and clues with the guess counter. While doing so, you can: </p>
+  <ul>
+    <li>Highlight cells to take pencil notes</li>
+    <li>Lock and unlock the highlighted cells for future guesses</li>
+  </ul>
+  
+</div>
+
+
+<div class="alert-container">You got it in 4 guesses!</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

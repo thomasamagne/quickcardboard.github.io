@@ -450,7 +450,6 @@ function toggleGuessBtn(e) {
   if (e.target.dataset.state == "read") {
     lockmodeChecked.disabled = false;
     clearGrid();
-    makeInactive();
     //clear key highlight
     for (let i = 0; i < keyList.length; i++) {
       keyList[i].classList.remove("keyh");

@@ -1,4 +1,5 @@
 let dict = [
+  
   "abet",
   "abut",
   "ache",
@@ -999,6 +1000,8 @@ let dict = [
   "zoom"
 ];
 let allowedWords = [
+  "birl","birr","bitt","blub","bonk","busk","caca","cere","deke","diss","frap","frit","futz","gawp","glug","gybe","knap","spam","swot","wawl","whop","wist","xray","yaup","yean","zonk",
+
   "aahs",
   "abbe",
   "abbr",

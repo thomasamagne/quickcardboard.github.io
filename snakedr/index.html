@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basic template</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="title">
+      <div class="empty"></div>
+      <h1>SNAKE DR</h1>
+      <div id="introbtn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="30"
+          height="30"
+          viewBox="0 0 172 172"
+          style="fill: #000000;"
+        >
+          <g
+            fill="none"
+            fill-rule="nonzero"
+            stroke="none"
+            stroke-width="1"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-miterlimit="10"
+            stroke-dasharray=""
+            stroke-dashoffset="0"
+            font-family="none"
+            font-weight="none"
+            font-size="none"
+            text-anchor="none"
+            style="mix-blend-mode: normal;"
+          >
+            <path d="M0,172v-172h172v172z" fill="none"></path>
+            <g fill="#ffffff">
+              <path
+                d="M86.51511,17.2c-28.42587,0 -44.54576,15.92621 -45.00443,38.97995v1.15339h25.09453v-1.15339c0.55039,-10.1824 7.5946,-16.75208 18.2414,-16.75208c10.55507,0 17.59193,6.1026 17.59193,14.71406c0,8.61146 -3.61138,13.05758 -15.55391,20.18985c-12.7796,7.4992 -17.8777,15.83376 -16.6737,30.6487l0.14557,3.95286h24.57943v-3.7625c0,-8.88667 3.42907,-13.43284 15.74427,-20.55938c13.0548,-7.68839 19.80911,-17.40631 19.80911,-31.29817c0,-21.39107 -17.49195,-36.11328 -43.97422,-36.11328zM83.17812,126.13333c-9.41986,0 -15.29635,5.46853 -15.29635,14.37812c0,8.82934 5.88222,14.28854 15.29635,14.28854c9.41413,0 15.21797,-5.45921 15.21797,-14.28854c0,-8.90959 -5.7981,-14.37812 -15.21797,-14.37812z"
+              ></path>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="tile-container">
+      <div class="snakehead snake" data-index="11">
+        <div class="snakeeye"></div>
+        <div class="snakemouth"></div>
+      </div>
+      <div class="tile snake" data-index="0"></div>
+      <div class="tile snake" data-index="1"></div>
+      <div class="tile snake" data-index="2"></div>
+      <div class="tile snake" data-index="3"></div>
+      <div class="tile snake" data-index="4"></div>
+      <div class="tile snake" data-index="5"></div>
+      <div class="tile snake" data-index="6"></div>
+      <div class="tile snake" data-index="7"></div>
+      <div class="tile snake" data-index="8"></div>
+      <div class="tile snake" data-index="9"></div>
+      <div class="snaketail snake" data-index="10"></div>
+
+      <div id="scorebox">
+        <div class="score">Score: <span id="scorecount"></span></div>
+        <div class="hammer">
+          Pills: <span id="hammercount"></span> &nbsp Letters:
+          <span id="letters-left"></span>
+        </div>
+        <div class="alert"></div>
+      </div>
+    </div>
+    <div id="copy">SHARE</div>
+    <div id="start">START</div>
+    <div id="submit">SUBMIT</div>
+
+    <div class="next-container">
+      <div class="ctile" data-cindex="0"></div>
+      <div class="ctile" data-cindex="1"></div>
+      <div class="ctile" data-cindex="2"></div>
+      <div class="ctile" data-cindex="3"></div>
+      <div class="ctile" data-cindex="4"></div>
+      <div class="ctile" data-cindex="5"></div>
+      <div class="ctile" data-cindex="6"></div>
+    </div>
+
+    <div id="instructions">
+      <h2>
+        Instructions<img
+          id="closeinstruction"
+          src="https://img.icons8.com/ios-filled/50/000000/x.png"
+        />
+      </h2>
+      <p>
+        Save the snake by eliminating all the letters from its body while
+        scoring as many points as possible. Points are deducted for every letter
+        used, and earned for every >4 letter word created.
+      </p>
+
+      <h2>Helpful tips</h2>
+      <p>
+        Use your pills by clicking on the snake to instantly eliminate a letter.
+        Pills can only be used if there are more than 3 letters in the snake.
+        You will earn more pills for every >5 letter word created.
+      </p>
+      <p>
+        You will get the same starting letters and draws each day. You
+        re-attempt the day's puzzle to get a better score.
+      </p>
+    </div>
+    <script src="./dic.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>

@@ -106,14 +106,17 @@ function stopInteraction() {
 }
 
 function deleteLetter(e) {
-  if (hammercount > 0 && current.length > 3) {
+  if (hammercount > 0 && current.length > 3 && e.target.textContent != "") {
     hammercount--;
+    alert(`"${e.target.textContent.toUpperCase()}" removed with pill`);
     current.splice(tiles.indexOf(e.target), 1);
     draw(current);
   } else if (hammercount <= 0) {
     alert("No pills left, make some longer words");
-  } else {
+  } else if (current.length < 4) {
     alert("Not enough letters in snake for a pill");
+  } else {
+    alert("No letter selected");
   }
 }
 

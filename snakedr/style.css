@@ -101,11 +101,14 @@ body {
   cursor: pointer;
   position: relative;
 }
+
+@media (hover:hover) {
 .tile:hover:not(:empty) {
   border: 0.1em solid var(--losecolor);
   text-decoration: line-through;
   text-decoration-color: var(--losecolor);
   text-decoration-thickness: 0.15em;
+}
 }
 
 .snakehead {
@@ -181,6 +184,7 @@ body {
   cursor: pointer;
   display: none;
 }
+
 #copy:hover {
   background-color: var(--tile-color);
   transition: 100ms ease-in;
@@ -214,9 +218,12 @@ body {
   text-align: center;
   cursor: pointer;
 }
+
+@media (hover:hover) {
 .ctile:hover {
   position: relative;
   top: -0.1em;
+}
 }
 
 [data-cindex="0"] {

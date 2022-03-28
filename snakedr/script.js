@@ -102,6 +102,7 @@ function stopInteraction() {
   for (let i = 0; i < tiles.length; i++) {
     tiles[i].removeEventListener("click", deleteLetter);
   }
+  submitBtn.removeEventListener("click", submit);
 }
 
 function deleteLetter(e) {
@@ -320,7 +321,6 @@ function checkLoss() {
       }, i * 150);
     }
     stopInteraction();
-    submitBtn.style.display = "none";
   }
 }
 
